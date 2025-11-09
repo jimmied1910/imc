@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invest In Me Coin ($IMC) — The Meme Coin That Makes You Level Up IRL</title>
+  <meta name="description" content="IMC is the meme coin that rewards real-world self‑improvement. Join the movement: health is the final frontier of wealth." />
+  <meta property="og:title" content="Invest In Me Coin ($IMC)" />
+  <meta property="og:description" content="The meme coin that makes you level up in real life. Health is the final frontier of wealth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/imc-og.png" />
+  <meta name="theme-color" content="#0b1f3b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* P3 palette: Silver Steel + Navy + Emerald */
+      --navy:#0b1f3b;         /* deep navy */
+      --navy-2:#122a4d;       /* lighter navy */
+      --emerald:#00a878;      /* emerald */
+      --emerald-2:#00c08c;    /* brighter emerald */
+      --steel:#c7ced6;        /* silver steel */
+      --steel-2:#e2e7ec;      /* light steel */
+      --ink:#0e1116;          /* near black */
+      --white:#ffffff;
+      --muted:#7c8aa5;
+      --ring: rgba(0,168,120,.35);
+      --grad: radial-gradient(1200px 600px at 80% -10%, rgba(0,168,120,.25), transparent 55%),
+              radial-gradient(900px 500px at -10% 10%, rgba(12,34,72,.35), transparent 60%);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Outfit',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+      color:var(--steel-2);
+      background:linear-gradient(180deg, #0b1f3b 0%, #0c1730 60%, #0b1f3b 100%);
+      background-attachment:fixed;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:var(--emerald);text-decoration:none}
+    a:hover{color:var(--emerald-2)}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(140%) blur(10px);
+      background:rgba(11,31,59,.6);
+      border-bottom:1px solid rgba(199,206,214,.15);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;gap:12px;align-items:center;color:var(--white);font-weight:700;letter-spacing:.4px}
+    .brand-icon{width:36px;height:36px;border-radius:10px;background:
+      conic-gradient(from 210deg at 50% 50%, var(--emerald), #23ffd1, var(--emerald) 60%),
+      linear-gradient(135deg, #152a4d, #0b1f3b);
+      box-shadow:0 0 0 2px rgba(199,206,214,.15), 0 10px 30px rgba(0,168,120,.25);
+    }
+    .nav-actions{display:flex;gap:10px}
+    .btn{appearance:none;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;
+      gap:8px;padding:12px 16px;border-radius:12px;font-weight:600;letter-spacing:.2px;transition:transform .08s ease, box-shadow .2s ease, background .2s ease, color .2s ease}
+    .btn-primary{background:linear-gradient(180deg, var(--emerald-2), var(--emerald));color:#05251c;box-shadow:0 6px 24px rgba(0,168,120,.35)}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-ghost{background:rgba(199,206,214,.08);color:var(--steel);border:1px solid rgba(199,206,214,.18)}
+    .btn-ghost:hover{background:rgba(199,206,214,.12)}
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:.9;pointer-events:none}
+    .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;padding:72px 0}
+    @media (max-width: 980px){.hero-inner{grid-template-columns:1fr;padding:56px 0}}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(199,206,214,.2);color:var(--steel);background:rgba(199,206,214,.06);font-weight:600;font-size:13px}
+    h1{margin:.4rem 0 1rem;color:var(--white);font-weight:800;line-height:1.05;font-size:clamp(32px, 4.6vw, 56px)}
+    .lead{color:#d9e3ee;max-width:56ch;font-size:clamp(16px, 1.6vw, 18px);line-height:1.6}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .meta{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px;margin-top:14px}
+    /* Hero visual */
+    .hero-card{position:relative;background:linear-gradient(180deg, rgba(199,206,214,.08), rgba(199,206,214,.03));
+      border:1px solid rgba(199,206,214,.16);border-radius:20px;padding:18px;box-shadow:0 10px 30px rgba(2,8,20,.35)}
+    .viz{border-radius:16px;overflow:hidden;background:linear-gradient(145deg, rgba(0,168,120,.22), rgba(199,206,214,.08));
+      aspect-ratio:4/5;display:grid;place-items:center;position:relative}
+    .centurion{width:min(260px,70%);height:auto;filter:drop-shadow(0 18px 34px rgba(0,168,120,.35))}
+    .halo{position:absolute;inset:auto auto 10% 50%;transform:translateX(-50%);width:80%;height:40px;border-radius:999px;background:radial-gradient(closest-side, rgba(35,255,209,.4), transparent 70%);filter:blur(8px)}
+    /* Sections */
+    section{padding:54px 0;border-top:1px solid rgba(199,206,214,.12)}
+    h2{color:var(--white);font-size:clamp(24px,2.6vw,34px);margin:0 0 14px;font-weight:800}
+    .kicker{color:var(--emerald-2);font-weight:700;letter-spacing:.24px;margin-bottom:6px}
+    .text{color:#d1dae6;max-width:70ch;line-height:1.7}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    @media (max-width: 900px){.cards{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg, rgba(199,206,214,.06), rgba(199,206,214,.03));
+      border:1px solid rgba(199,206,214,.16);border-radius:16px;padding:18px}
+    .card h3{margin:0 0 6px;color:var(--steel-2);font-size:18px}
+    .check{display:inline-flex;align-items:center;gap:8px;color:var(--steel)}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(199,206,214,.18);color:var(--steel);background:rgba(199,206,214,.06);padding:6px 10px;border-radius:999px;font-size:13px;font-weight:600}
+    table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid rgba(199,206,214,.16);border-radius:14px;overflow:hidden}
+    th,td{padding:14px;border-bottom:1px solid rgba(199,206,214,.12);text-align:left}
+    th{background:rgba(199,206,214,.10);color:var(--white);font-weight:700}
+    tr:last-child td{border-bottom:none}
+    footer{padding:48px 0;color:var(--muted);text-align:center}
+    .small{font-size:13px;color:var(--muted)}
+    /* Utilities */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    @media (max-width: 980px){.grid-2{grid-template-columns:1fr}}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0); white-space:nowrap;border:0}
+    /* Focus ring */
+    .btn:focus-visible, a:focus-visible {outline:none; box-shadow:0 0 0 4px var(--ring)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true"></div>
+        <span>$IMC</span>
+      </div>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="#how">How it works</a>
+        <a class="btn btn-ghost" href="#token">Token</a>
+        <a class="btn btn-primary" href="#join">Join IMC</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow">The Meme Coin That Makes You Level Up IRL</span>
+          <h1>Invest In Me Coin <span aria-hidden="true">($IMC)</span></h1>
+          <p class="lead">We’re done with coins that do nothing. IMC rewards people for actually improving themselves — physically, mentally, financially. <strong>Your health becomes the alpha.</strong></p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#join">Join the IMC Movement</a>
+            <a class="btn btn-ghost" href="https://x.com" target="_blank" rel="noopener">Follow on X</a>
+          </div>
+          <div class="meta">
+            <span class="badge">Palette: Silver • Navy • Emerald</span>
+            <span class="badge">Phase 1: Community & Virality</span>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="viz">
+            <!-- Minimal futuristic centurion SVG (placeholder) -->
+            <svg class="centurion" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Futuristic Roman Centurion silhouette">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#e6f7f1"/>
+                  <stop offset="100%" stop-color="#00a878"/>
+                </linearGradient>
+              </defs>
+              <path d="M150 20c40 0 64 18 78 40-16 6-36 10-78 10s-62-4-78-10c14-22 38-40 78-40Z" fill="url(#g)" opacity=".9"/>
+              <rect x="110" y="70" width="80" height="110" rx="16" fill="#c7ced6" opacity=".85"/>
+              <circle cx="150" cy="210" r="46" fill="#00a878" opacity=".75"/>
+              <rect x="120" y="260" width="60" height="90" rx="10" fill="#c7ced6" opacity=".85"/>
+              <rect x="88" y="260" width="24" height="80" rx="8" fill="#e2e7ec" opacity=".9"/>
+              <rect x="188" y="260" width="24" height="80" rx="8" fill="#e2e7ec" opacity=".9"/>
+              <rect x="130" y="356" width="40" height="40" rx="10" fill="#00a878" opacity=".9"/>
+            </svg>
+            <div class="halo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why">
+      <div class="container grid-2">
+        <div>
+          <span class="kicker">Why IMC exists</span>
+          <h2>Investing in yourself beats every pump.</h2>
+          <p class="text">IMC is the first meme coin designed to help its holders become the strongest, healthiest, most disciplined version of themselves — together. In our culture, discipline is status, wellness is the flex, and improvement is the whole point.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><h3>Culture</h3><p class="text">Phase 1 builds a movement on X where self‑improvement is the meta.</p></div>
+          <div class="card"><h3>Utility</h3><p class="text">Phase 2 integrates wellness apps so your habits unlock real perks.</p></div>
+          <div class="card"><h3>Sustainability</h3><p class="text">Phase 3 introduces DeFi yield to fund rewards transparently.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how">
+      <div class="container">
+        <span class="kicker">How it works</span>
+        <h2>Simple path. Serious momentum.</h2>
+        <div class="cards">
+          <div class="card"><h3>1) Mint IMC</h3><p class="text">Grab your stake in the movement and claim your identity badge.</p></div>
+          <div class="card"><h3>2) Track Progress</h3><p class="text">Connect health apps (Phase 2) — steps, sleep, workouts, mindfulness.</p></div>
+          <div class="card"><h3>3) Earn Perks</h3><p class="text">Unlock $WELL rewards, discounts, and community challenges.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOKEN -->
+    <section id="token">
+      <div class="container">
+        <span class="kicker">Token model</span>
+        <h2>IMC = identity. WELL = reward.</h2>
+        <div class="grid-2">
+          <div>
+            <table aria-label="Token overview">
+              <thead><tr><th>Token</th><th>Purpose</th></tr></thead>
+              <tbody>
+                <tr><td>$IMC</td><td>Core meme coin • access token • community identity</td></tr>
+                <tr><td>$WELL</td><td>Earned reward for verified health activity (Phase 2)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p class="text">We’re building a dual‑token system that rewards real effort. $IMC represents the culture you join. $WELL is the proof you’re leveling up IRL.</p>
+            <p class="text">No empty promises. Just transparent mechanics and a community obsessed with improvement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- YIELD / SUSTAINABILITY -->
+    <section id="sustainable">
+      <div class="container grid-2">
+        <div>
+          <span class="kicker">Sustainability</span>
+          <h2>DeFi yield funds real rewards.</h2>
+          <p class="text">The DAO treasury will allocate a portion to audited liquid‑staking partners to generate ~12% annual yield. That on‑chain yield replenishes the rewards pool so perks are funded by real economics — not just hype.</p>
+        </div>
+        <div class="card">
+          <h3>Treasury Allocation (example)</h3>
+          <ul class="text" style="margin:0; padding-left:18px">
+            <li>50% Stable Reserves — peg & liquidity</li>
+            <li>25% Liquid Staked Assets — yield engine</li>
+            <li>15% Growth & Grants — partners & challenges</li>
+            <li>10% Ops Buffer — legal & infra</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP / FUTURE -->
+    <section id="future">
+      <div class="container grid-2">
+        <div>
+          <span class="kicker">Roadmap</span>
+          <h2>Meme → Movement → Institution</h2>
+          <p class="text"><strong>Phase 1:</strong> Culture and virality on X • <strong>Phase 2:</strong> Wellness app integrations and $WELL perks • <strong>Phase 3:</strong> Institutional‑grade wellness finance with transparent yield.</p>
+        </div>
+        <div class="card">
+          <h3>What you can do today</h3>
+          <p class="text">Join the community, amplify the mission, and prepare your wallet. The sooner you start, the sooner you level up.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section id="join">
+      <div class="container">
+        <span class="kicker">Join us</span>
+        <h2>Discipline is the alpha. Health is the edge.</h2>
+        <p class="text">This is not financial advice. This is discipline advice. Be early. Be consistent. Be the example.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#" id="mintBtn">Mint IMC (pump.fun)</a>
+          <a class="btn btn-ghost" href="https://x.com" target="_blank" rel="noopener">Follow on X</a>
+        </div>
+        <p class="small" style="margin-top:12px">Replace links when your live mint + X handle are ready.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>IMC — Health is the final frontier of wealth.</p>
+      <p class="small">© <span id="y"></span> IMC DAO. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple behavior & accessibility helpers
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('mintBtn').addEventListener('click', function(e){
+      if(this.getAttribute('href') === '#'){
+        e.preventDefault();
+        alert('Set your live pump.fun mint link on the Mint button once deployed.');
+      }
+    });
+  </script>
+</body>
+</html>
